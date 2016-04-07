@@ -1,0 +1,110 @@
+.welcome {
+  text-align: center;
+}
+
+
+#mentee_signup {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
+  float: left;
+}
+
+#mentor_signup {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.button {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 4px solid #035432;
+    border-radius: 26px;
+    background: #069e5e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#069e5e), to(#035432));
+    background: -moz-linear-gradient(top, #069e5e, #035432);
+    background: linear-gradient(to bottom, #069e5e, #035432);
+    text-shadow: #02321e 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.button:hover,
+.button:focus {
+    border: 4px solid ##04633b;
+    background: #07be71;
+    background: -webkit-gradient(linear, left top, left bottom, from(#07be71), to(#04653c));
+    background: -moz-linear-gradient(top, #07be71, #04653c);
+    background: linear-gradient(to bottom, #07be71, #04653c);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #035432;
+    background: -webkit-gradient(linear, left top, left bottom, from(#035432), to(#035432));
+    background: -moz-linear-gradient(top, #035432, #035432);
+    background: linear-gradient(to bottom, #035432, #035432);
+}
+.button:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+.button-right {
+    margin-left: 55%;
+    margin-right: 10%;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 4px solid #035432;
+    border-radius: 26px;
+    background: #069e5e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#069e5e), to(#035432));
+    background: -moz-linear-gradient(top, #069e5e, #035432);
+    background: linear-gradient(to bottom, #069e5e, #035432);
+    text-shadow: #02321e 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.button-right:hover,
+.button-right:focus {
+    border: 4px solid ##04633b;
+    background: #07be71;
+    background: -webkit-gradient(linear, left top, left bottom, from(#07be71), to(#04653c));
+    background: -moz-linear-gradient(top, #07be71, #04653c);
+    background: linear-gradient(to bottom, #07be71, #04653c);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button-right:active {
+    background: #035432;
+    background: -webkit-gradient(linear, left top, left bottom, from(#035432), to(#035432));
+    background: -moz-linear-gradient(top, #035432, #035432);
+    background: linear-gradient(to bottom, #035432, #035432);
+}
+.button-right:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
