@@ -20,5 +20,35 @@
 </head>
 <body>
   <%= yield %>
+  <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+
+</style>
+
+<div class="tweets">
+  <table class="tweet-collection" style="width:100%">
+
+  <tr>
+  <th>Tweet</th>
+  </tr>
+  <% @tweets = TWITTER_CLIENT.search("to:ijessewilliams ", result_type: "recent").take(20).collect do |tweet| %>
+  <%= "#{tweet.user.screen_name}: #{tweet.text}" %>
+  <% end %>
+  <% @tweets.each do |tweet| %>
+  <tr>
+
+  <td><%= tweet %></td>
+  </tr>
+  <% end %>
+
+  </table>
+
+</div>
 </body>
 </html>
