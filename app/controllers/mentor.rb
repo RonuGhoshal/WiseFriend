@@ -11,3 +11,10 @@ post '/mentors' do
   end
   erb :"/mentors/show"
 end
+
+get '/mentors/:id' do
+  @mentor = Mentor.find(params[:id])
+  erb :'/mentors/show'
+end
+
+

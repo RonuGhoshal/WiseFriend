@@ -3,7 +3,7 @@ class Mentor < ActiveRecord::Base
   has_many :mentees, through: :mentorships
   has_many :areas
 
-  def match(mentee)
+  def match_score(mentee)
     if self.mentee_preferred_gender == 'M' && mentee.gender != "M"
       return 0
     elsif self.mentee_preferred_gender == 'F' && mentee.gender != "F"
@@ -20,6 +20,10 @@ class Mentor < ActiveRecord::Base
     score += 20 if mentor_skills.include?(mentee.challenge3)
     score += 10 if self.preferred_communication == mentee.preferred_communication
     return score
+  end
+
+  def possible_matches
+    @possible_matches = Mentee.all.sort_by {|m| -match_score(m)}[0..2]
   end
 
 end
