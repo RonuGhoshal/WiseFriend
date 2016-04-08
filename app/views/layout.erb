@@ -28,6 +28,7 @@ table, th, td {
 th, td {
     padding: 5px;
 }
+
 </style>
 
 <div class="tweets">
@@ -36,9 +37,7 @@ th, td {
   <tr>
   <th>Tweet</th>
   </tr>
-  <% @tweets = TWITTER_CLIENT.search("to:ijessewilliams ", result_type: "recent").take(20).collect do |tweet| %>
-  <%= "#{tweet.user.screen_name}: #{tweet.text}" %>
-  <% end %>
+
   <% @tweets.each do |tweet| %>
   <tr>
 
