@@ -35,13 +35,15 @@ th, td {
   <table class="tweet-collection" style="width:100%">
 
   <tr>
-  <th>Tweet</th>
+  <th>Recent Tweets</th>
   </tr>
 
   <% @tweets.each do |tweet| %>
   <tr>
 
-  <td><%= tweet %></td>
+  <td><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">test</p><a href="<%=tweet.url%>"></a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></td>
+
   </tr>
   <% end %>
 
