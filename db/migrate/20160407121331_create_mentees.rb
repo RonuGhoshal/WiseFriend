@@ -15,6 +15,7 @@ class CreateMentees < ActiveRecord::Migration
       t.string :challenge1
       t.string :challenge2
       t.string :challenge3
+      t.string :password_hash
     end
   end
 end

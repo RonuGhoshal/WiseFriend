@@ -13,7 +13,7 @@ class CreateMentors < ActiveRecord::Migration
       t.string :preferred_communication
       t.string :how_did_you_hear
       t.string :addl_info
-
+      t.string :password_hash
     end
   end
 end
