@@ -20,7 +20,7 @@ end
 get '/mentees/:id/mentorships' do
   @mentee = Mentee.find(params[:id])
   @mentor = Mentor.find(session[:id])
-  Mentorship.new(mentee_id: @mentee.id, mentor_id: @mentee.id)
+  Mentorship.create(mentee_id: @mentee.id, mentor_id: @mentee.id)
   erb :'/mentors/matches'
 end
 
