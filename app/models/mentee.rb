@@ -1,4 +1,5 @@
 class Mentee < ActiveRecord::Base
+  include BCrypt
   has_many :mentorships
   has_many :mentors, through: :mentorships
 

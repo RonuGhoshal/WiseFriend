@@ -1,8 +1,4 @@
 get '/' do
-  @tweets = TWITTER_CLIENT.search("from:DefyVentures", result_type: "recent").take(20).collect do |tweet|
-    # "#{tweet.user.screen_name}: #{tweet.text}"
-    tweet
-  end
   erb :'index'
 end
 
@@ -14,14 +10,14 @@ post '/login' do
   if params[:user_type] == "Mentee"
     @mentee = Mentee.find_by(email: params[email])
     if @mentee
-      if Mentee.authenticate(@mentee.email, params[:password])
+      # if Mentee.authenticate(@mentee.email, params[:password])
         session[:id] = @mentee.id
         @session[:type] = "Mentee"
         redirect "/mentees/#{@mentee.id}"
-      else
+      # else
         @errors = ["Invalid password."]
         erb :'/login'
-      end
+      # end
     else
       @errors = ["Invalid username."]
       erb :'/login'
@@ -42,3 +38,4 @@ post '/login' do
     end
   end
 end
+

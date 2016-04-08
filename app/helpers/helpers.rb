@@ -24,4 +24,15 @@ helpers do
     end
   end
 
+  def get_tweets
+    @original_tweets = TWITTER_CLIENT.search("ex-offender", result_type: "recent").take(50)
+    tweet_hash = {}
+    @original_tweets.each do |tweet|
+      tweet_hash[tweet.text] ||= tweet
+    end
+    @tweets = []
+    tweet_hash.each do |k, v|
+      @tweets.push(v)
+    end
+  end
 end

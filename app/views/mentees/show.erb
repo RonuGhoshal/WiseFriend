@@ -1,3 +1,12 @@
+<% if Mentorship.find_by(mentee_id: @mentee.id) %>
+<h3> Congratulations - you've been matched! </h3>
+<h4>Your Mentor Profile</h4>
+
+
+
+<% end  %>
+
+
 <h3>Your Profile</h3>
 
 <%= erb :'mentees/_mentee', layout: false, locals: {mentee: @mentee} %>
