@@ -5,6 +5,8 @@ end
 post '/mentors' do
   @mentor = Mentor.new(params[:mentor])
   if @mentor.save
+    session[:id] = @mentor.id
+    session[:type] = "mentor"
     params[:expertise].each do |area|
       @mentor.areas.create(area_type: area)
     end
