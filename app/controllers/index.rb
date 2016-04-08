@@ -1,7 +1,12 @@
 get '/' do
-  @tweets = TWITTER_CLIENT.search("from:DefyVentures", result_type: "recent").take(20).collect do |tweet|
-    # "#{tweet.user.screen_name}: #{tweet.text}"
-    tweet
+  @original_tweets = TWITTER_CLIENT.search("ex-offender", result_type: "recent").take(50)
+  tweet_hash = {}
+  @original_tweets.each do |tweet|
+    tweet_hash[tweet.text] ||= tweet
+  end
+  @tweets = []
+  tweet_hash.each do |k, v|
+    @tweets.push(v)
   end
   erb :'index'
 end
