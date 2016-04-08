@@ -27,7 +27,7 @@ class Mentor < ActiveRecord::Base
     @possible_matches = Mentee.all.sort_by {|m| -match_score(m)}[0..2]
   end
 
-    def password
+  def password
     @password ||= Password.new(password_hash)
   end
 
