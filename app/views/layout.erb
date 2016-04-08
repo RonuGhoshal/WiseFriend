@@ -21,33 +21,22 @@
 <body>
   <%= yield %>
   <style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
+.tweets {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
 }
 
 </style>
 
 <div class="tweets">
-  <table class="tweet-collection" style="width:100%">
-
-  <tr>
-  <th>Recent Tweets</th>
-  </tr>
-
   <% @tweets.each do |tweet| %>
-  <tr>
 
-  <td><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">test</p><a href="<%=tweet.url%>"></a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></td>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">test</p><a href="<%=tweet.url%>"></a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  </tr>
   <% end %>
-
-  </table>
 
 </div>
 </body>
