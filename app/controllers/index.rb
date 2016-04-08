@@ -1,5 +1,4 @@
 get '/' do
-  # get_tweets
   erb :'index'
 end
 
@@ -11,14 +10,14 @@ post '/login' do
   if params[:user_type] == "Mentee"
     @mentee = Mentee.find_by(email: params[email])
     if @mentee
-      if Mentee.authenticate(@mentee.email, params[:password])
+      # if Mentee.authenticate(@mentee.email, params[:password])
         session[:id] = @mentee.id
         @session[:type] = "Mentee"
         redirect "/mentees/#{@mentee.id}"
-      else
+      # else
         @errors = ["Invalid password."]
         erb :'/login'
-      end
+      # end
     else
       @errors = ["Invalid username."]
       erb :'/login'
@@ -39,3 +38,4 @@ post '/login' do
     end
   end
 end
+

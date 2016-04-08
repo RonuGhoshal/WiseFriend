@@ -10,7 +10,7 @@ gem 'sinatra-contrib'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'faker'
 gem 'rake'
 gem 'bcrypt'
 gem 'shotgun'
